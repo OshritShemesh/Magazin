@@ -1,18 +1,12 @@
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import Picture from "./comps/picture";
-import UploadImage from "./comps/uplaodimage";
-import Login from "./comps/login";
-import AddUser from "./comps/addUser";
 import Home from "./comps/home";
-import History from './comps/history'
-import Register from './comps/register'
 export default function MainRouter(props) {
 
     return (
         <>
             <Router>
                 <Switch>
-                    <Route path="/pictures">
+                    {/* <Route path="/pictures">
                         <Picture></Picture>
                     </Route>
                     <Route path="/history">
@@ -29,9 +23,9 @@ export default function MainRouter(props) {
                     </Route>
                     <Route path="/register">
                       <Register></Register>
-                    </Route>
+                    </Route> */}
                     <Route path="/">
-                        <Login></Login>
+                        <Home></Home>
                     </Route>
                 </Switch>
             </Router>

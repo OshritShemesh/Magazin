@@ -4,18 +4,22 @@ import { withRouter } from 'react-router-dom';
 export default withRouter(function Home(props) {
     const { history } = props
 
-    function getHistory() {
-        history.push('/history')
-    }
 
-    function getPictures() {
-        history.push('/pictures')
-
-    }
     return (
         <>
-            <button type="button" onClick={() => { getHistory() }} className="btn btn-primary">My History</button>
-            <button type="button" onClick={() => { getPictures() }} className="btn btn-primary">All Pictures</button>
+            <div class="card" style={{ width: "18rem" }}>
+                <img class="card-img-top" src="magazinimge.png" alt="Card image cap" />
+                <div class="card-body">
+                    <h5 class="card-title">My Magzin</h5>
+
+                </div>
+            </div>
+            <div class="card" style={{ width: "18rem" }}>
+                <img class="card-img-top" src="magazinimge.png" alt="Card image cap" />
+                <div class="card-body">
+                    <h5 class="card-title">My Magzin</h5>
+                </div>
+            </div>
         </>
     )
 })
