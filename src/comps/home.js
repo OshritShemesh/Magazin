@@ -7,6 +7,7 @@ export default withRouter(function Home(props) {
 
     return (
         <>
+        <h1>What do yuw want to do today?</h1>
             <div class="card" style={{ width: "18rem" }}>
                 <img class="card-img-top" src="magazinimge.png" alt="Card image cap" />
                 <div class="card-body">
