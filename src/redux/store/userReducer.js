@@ -1,8 +1,9 @@
 import produce from 'immer'
 import createReducer from './reducerUtill'
+
 const initialState = {
     user: {
-        firstName: "",
+        firstName: "tamar",
         lastName: "",
         id: "",
         email: "",
