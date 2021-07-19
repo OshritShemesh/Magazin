@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { action } from '../redux/action';
+import { actions } from '../redux/action';
 
 function CreateMagazine(props) {
 
@@ -17,7 +17,7 @@ function CreateMagazine(props) {
 
     return (
         <>
-            {props.user && props.user.firstName}
+            {/* {props.user && props.user.firstName} */}
             <input name='title' type="text" onChange={e => setMagazine({ ...magazine, title: e.target.value })}></input>
             <textarea name="subTitle" cols="50" rows="3" onChange={e => setMagazine({ ...magazine, subTitle: e.target.value })}></textarea>
             <textarea name="content" cols="50" rows="10" onChange={e => setMagazine({ ...magazine, content: e.target.value })}></textarea>
@@ -36,7 +36,7 @@ export default connect(
     (dispatch) => {
         return {
             createMagazine: (magazin) => {
-                dispatch(action.createMagazine(magazin))
+                dispatch(actions.createMagazine(magazin))
             }
         }
     }

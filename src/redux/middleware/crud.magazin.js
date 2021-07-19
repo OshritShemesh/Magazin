@@ -1,21 +1,26 @@
 import axios from 'axios';
+import {actions}from '../action'
 
 
 export const getAllMagazin = ({ dispatch, getState }) => next => action => {
+    debugger
+    if (action.type == 'GET_ALL_MAGAZINS') {
 
-    if (action.type == 'GET_ALL_MAGAZIN') {
-
-        await axios.get('http://localhost:4000/getAllMagazin').then(res => {
-            console.log("getAllMagazin work" + JSON.stringify(res.data));
-        }, err => {
-            console.log("error in getAllMagazin " + err);
-        })
+        axios.get('http://localhost:4000/getAllMagazins').then(res => {
+            return res.data
+        }).then((res) => {
+            console.log(res.allTheMagazins)
+            dispatch(actions.setAllMagazins(res.allTheMagazins))
+        }).catch(err =>
+            console.log(err))
 
     }
 
-
     return next(action);
 }
+
+
+
 
 export const createMagazine = ({ dispatch, getState }) => next => action => {
     if (action.type == 'CREATE_MAGAZINE') {

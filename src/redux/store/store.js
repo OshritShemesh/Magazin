@@ -1,11 +1,14 @@
 import { applyMiddleware, combineReducers, createStore } from 'redux'
 import user from './userReducer'
-import { createMagazine } from '../middleware/crud.magazin'
+import magazin from './magazinReducer'
+import { createMagazine,getAllMagazin } from '../middleware/crud.magazin'
 
-const reducer = combineReducers({ user })
+
+const reducer = combineReducers({ user, magazin })
 
 const store = createStore(reducer, applyMiddleware(
-    createMagazine
+    createMagazine,
+    getAllMagazin
 ))
 
-export default store
+export default store;

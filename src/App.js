@@ -14,6 +14,7 @@ function App() {
         <MainRouter></MainRouter>
 
         <CreateMagazine />
+        <ViewMagazins/>
       </Provider>
 
       {/* <ChoosenPic></ChoosenPic> */}

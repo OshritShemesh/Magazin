@@ -5,7 +5,7 @@ function convertActionNameToType(actionName) {
 }
 
 
-export const action = new Proxy(
+export const actions = new Proxy(
     {},
     {
         get: function (target, prop) {
