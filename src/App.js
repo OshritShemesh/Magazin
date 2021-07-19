@@ -15,6 +15,8 @@ function App() {
         <MainRouter></MainRouter>
 
         <CreateMagazine />
+        <ViewMagazins />
+
         <CreatePost />
       </Provider>
 
