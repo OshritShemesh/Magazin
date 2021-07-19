@@ -3,6 +3,7 @@ import MainRouter from './mainrouter';
 import { Provider } from 'react-redux';
 import store from './redux/store/store'
 import CreateMagazine from './comps/createMagazine';
+import CreatePost from './comps/createPost'
 // import UploadImage from './comps/uplaodimage'
 import ViewMagazins from './comps/ViewMagazins'
 
@@ -14,6 +15,7 @@ function App() {
         <MainRouter></MainRouter>
 
         <CreateMagazine />
+        <CreatePost />
       </Provider>
 
       {/* <ChoosenPic></ChoosenPic> */}

@@ -6,7 +6,7 @@ function convertActionToLowerCase(actionName) {
 
 
 export default function createReducer(state, action, handlers) {
-    debugger;
+    // debugger;
     let key = convertActionToLowerCase(action.type);
     const handler = handlers[key]
     if (handler) {

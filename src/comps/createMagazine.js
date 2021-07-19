@@ -7,7 +7,8 @@ function CreateMagazine(props) {
     const [magazine, setMagazine] = useState({
         title: "",
         subTitle: "",
-        content: ""
+        content: "",
+        userId: ""//add the user id
     })
 
     function addMagazine() {
